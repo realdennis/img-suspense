@@ -1,0 +1,32 @@
+{
+  "name": "img-suspense",
+  "version": "0.0.1",
+  "description": "React component for img suspense with fallback.",
+  "main": "dist/index.js",
+  "author": "@realdennis",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "microbundle build src/index.js --jsx React.createElement"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.5.0",
+    "jest": "^24.5.0",
+    "microbundle": "^0.11.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-testing-library": "^6.0.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
