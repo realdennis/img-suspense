@@ -4,11 +4,12 @@
 
 A React img component like **React.Suspense**!
 
-Actually, it's all props are same as `<img/>` like `src` `alt`...
+Actually, its all props are same as `<img/>` like `src` `alt`...
 
 **You should pass a react element to `fallback` prop.**
 
-When image are still pending, it'll show fallback element, after load it will be just a `<img/>`.
+When image are still pending, it'll show fallback element.
+
 
 ## Intallation
 
