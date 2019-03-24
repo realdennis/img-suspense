@@ -1,4 +1,6 @@
 # img-suspense
+[![Build Status](https://travis-ci.org/realdennis/img-suspense.svg?branch=master)](https://travis-ci.org/realdennis/img-suspense)
+[![Coverage Status](https://coveralls.io/repos/github/realdennis/img-suspense/badge.svg?branch=master)](https://coveralls.io/github/realdennis/img-suspense?branch=master)
 
 [Demo](https://codesandbox.io/s/k3jx7l96po)
 
