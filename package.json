@@ -1,10 +1,17 @@
 {
   "name": "img-suspense",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React component for img suspense with fallback.",
   "main": "dist/index.js",
   "author": "@realdennis",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "suspense",
+    "image",
+    "img suspense",
+    "Fallback"
+  ],
   "private": false,
   "scripts": {
     "test": "jest",
@@ -20,6 +27,7 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.5.0",
+    "coveralls": "^3.0.3",
     "jest": "^24.5.0",
     "microbundle": "^0.11.0",
     "react": "^16.8.5",
