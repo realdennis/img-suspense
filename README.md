@@ -2,7 +2,10 @@
 [![Build Status](https://travis-ci.org/realdennis/img-suspense.svg?branch=master)](https://travis-ci.org/realdennis/img-suspense)
 [![Coverage Status](https://coveralls.io/repos/github/realdennis/img-suspense/badge.svg?branch=master)](https://coveralls.io/github/realdennis/img-suspense?branch=master)
 
+![Gif Demo](https://media.giphy.com/media/3ZYutsrBnh8DmoLN27/giphy.gif)
+
 [Demo](https://codesandbox.io/s/k3jx7l96po)
+
 
 A React img component like **React.Suspense**!
 
@@ -34,8 +37,14 @@ import ImgSuspense from 'img-suspense';
 ```
 
 ## Handle Exception
+
+![Gif Demo](https://media.giphy.com/media/8F3dZPrSBmOC5OILum/giphy.gif)
+
+**Error Boundary** vs **onError**
+
 There's an [example](https://codesandbox.io/s/3812yrjzz5) show how to handle exception.
 
+### Error Boundary
 ```jsx
 <ErrorBoundary>
   <ImgSuspense src="./path/picuture.jpg" fallback={<p>Pending...</p>} />
@@ -51,7 +60,7 @@ That's a same way you handle React.suspense exception.
 - https://reactjs.org/docs/code-splitting.html#error-boundaries
 - https://reactjs.org/docs/error-boundaries.html
 
-Or...
+### Use onError to catch
 ```jsx
 <ImgSuspense
   onError={e => console.log('Error occurs! Override ImgSuspense exception')}
