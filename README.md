@@ -29,3 +29,15 @@ import ImgSuspense from 'img-suspense';
   />
 
 ```
+
+## Exception Handle
+
+If the **img** fails to load (for example, due to network failure), it will trigger an error.
+
+You can handle these errors to show a nice user experience and manage recovery with Error Boundaries.
+
+That's a same way you handle React.suspense exception.
+- https://reactjs.org/docs/code-splitting.html#error-boundaries
+- https://reactjs.org/docs/error-boundaries.html
+
+Or you can just **override onError handler** to prevent component exception, treat it like an img element!
