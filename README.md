@@ -32,6 +32,7 @@ import ImgSuspense from 'img-suspense';
 ```
 
 ## Handle Exception
+There's an [example](https://codesandbox.io/s/3812yrjzz5) show how to handle exception.
 
 ```jsx
 <ErrorBoundary>
@@ -57,3 +58,4 @@ Or...
 />
 ```
 You can just **override onError handler** to prevent component exception, treat it like an img element!
+
