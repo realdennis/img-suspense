@@ -70,3 +70,6 @@ That's a same way you handle React.suspense exception.
 ```
 You can just **override onError handler** to prevent component exception, treat it like an img element!
 
+---
+
+LICENSE MIT © 2019 realdennis
