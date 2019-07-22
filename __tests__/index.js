@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, cleanup, fireEvent } from 'react-testing-library';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/react/cleanup-after-each';
 import ImgSuspense from '../src/index.js';
-afterEach(cleanup);
+// afterEach(cleanup);
 const Fallback = () => <p data-testid="fallback">Pending...</p>;
 
 test('[Main] Before & After image load, it should render', () => {
