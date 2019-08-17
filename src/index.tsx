@@ -16,7 +16,7 @@ const { useState } = React;
 // import Proptypes from 'prop-types';
 
 interface ImageSuspenseProps {
-  fallback: React.ElementType;
+  fallback: React.ReactNode;
   src: string;
   alt: string;
   style?: object;
