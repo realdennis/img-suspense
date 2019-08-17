@@ -11,9 +11,18 @@
  * => Throw Exception
  *
  */
-import React, { useState } from 'react';
-import Proptypes from 'prop-types';
+import * as React from 'react';
+const { useState } = React;
+// import Proptypes from 'prop-types';
 
+interface ImageSuspenseProps {
+  fallback: React.ElementType;
+  src: string;
+  alt: string;
+  style?: object;
+  onLoad: (e?: Event) => void;
+  onError: (e?: Event) => void;
+}
 /**
  * Allow user to pass onLoad handler
  * Allow user to override onError handler
@@ -26,7 +35,7 @@ const ImgSuspense = ({
   onLoad,
   onError,
   ...restProps
-}) => {
+}: ImageSuspenseProps) => {
   const [isLoaded, setLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   if (isError) throw new Error('img onerror');
@@ -52,10 +61,5 @@ const ImgSuspense = ({
     </React.Fragment>
   );
 };
-ImgSuspense.propTypes = {
-  src: Proptypes.string.isRequired,
-  fallback: Proptypes.element.isRequired,
-  onLoad: Proptypes.func,
-  onError: Proptypes.func
-};
+
 export default ImgSuspense;

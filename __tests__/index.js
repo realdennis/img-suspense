@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/react/cleanup-after-each';
-import ImgSuspense from '../src/index.js';
+import ImgSuspense from '../src/index.tsx';
 // afterEach(cleanup);
 const Fallback = () => <p data-testid="fallback">Pending...</p>;
 
@@ -53,6 +53,6 @@ test('[Exception] should throw exception if onError did not replace', () => {
     <ImgSuspense src="Somewhere" fallback={<Fallback />} />
   );
   const img = container.querySelector('img');
-  console.error = ()=>{}
-  expect(()=>fireEvent.error(img)).toThrowError()
+  console.error = () => {};
+  expect(() => fireEvent.error(img)).toThrowError();
 });

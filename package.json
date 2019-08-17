@@ -2,7 +2,9 @@
   "name": "img-suspense",
   "version": "0.0.2",
   "description": "React component for img suspense with fallback.",
+  "source": "src/index.tsx",
   "main": "dist/index.js",
+  "types": "dist/foo.d.ts",
   "author": "@realdennis",
   "license": "MIT",
   "keywords": [
@@ -16,7 +18,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "microbundle build src/index.js --jsx React.createElement"
+    "build": "microbundle build src/index.tsx --jsx react"
   },
   "peerDependencies": {
     "react": "^16.8.0"
@@ -26,15 +28,15 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@testing-library/react": "^8.0.5",
     "babel-jest": "^24.5.0",
     "coveralls": "^3.0.3",
     "jest": "^24.5.0",
     "microbundle": "^0.11.0",
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2"
+    "@types/react": "^16.9.2",
+    "react-dom": "^16.8.5",
+    "typescript": "^3.5.3"
   }
 }
