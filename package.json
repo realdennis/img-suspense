@@ -1,6 +1,6 @@
 {
   "name": "img-suspense",
-  "version": "0.0.2",
+  "version": "0.0.2-beta",
   "description": "React component for img suspense with fallback.",
   "source": "src/index.tsx",
   "main": "dist/index.js",
@@ -30,12 +30,12 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@testing-library/react": "^8.0.5",
+    "@types/react": "^16.9.2",
     "babel-jest": "^24.5.0",
     "coveralls": "^3.0.3",
     "jest": "^24.5.0",
     "microbundle": "^0.11.0",
     "react": "^16.8.5",
-    "@types/react": "^16.9.2",
     "react-dom": "^16.8.5",
     "typescript": "^3.5.3"
   }
