@@ -4,7 +4,7 @@
   "description": "React component for img suspense with fallback.",
   "source": "src/index.tsx",
   "main": "dist/index.js",
-  "types": "dist/foo.d.ts",
+  "types": "dist/index.d.ts",
   "author": "@realdennis",
   "license": "MIT",
   "keywords": [
