@@ -20,14 +20,14 @@ interface ImageSuspenseProps {
   src: string;
   alt: string;
   style?: object;
-  onLoad: (e?: object) => void;
-  onError: (e?: object) => void;
+  onLoad?: (e?: object) => void;
+  onError?: (e?: object) => void;
 }
 /**
  * Allow user to pass onLoad handler
  * Allow user to override onError handler
  */
-const ImgSuspense = ({
+const ImgSuspense: React.FC<ImageSuspenseProps> = ({
   fallback,
   src,
   alt,
@@ -35,7 +35,7 @@ const ImgSuspense = ({
   onLoad,
   onError,
   ...restProps
-}: ImageSuspenseProps) => {
+}) => {
   const [isLoaded, setLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   if (isError) throw new Error('img onerror');
