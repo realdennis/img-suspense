@@ -1,6 +1,6 @@
 {
   "name": "img-suspense",
-  "version": "0.0.2-beta-4",
+  "version": "0.0.2-beta-5",
   "description": "React component for img suspense with fallback.",
   "source": "src/index.tsx",
   "main": "dist/index.js",
