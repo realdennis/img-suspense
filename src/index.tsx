@@ -19,7 +19,7 @@ interface ImageSuspenseProps {
   fallback: React.ReactNode;
   src: string;
   alt: string;
-  style?: object;
+  style?: React.CSSProperties;
   onLoad?: (e?: object) => void;
   onError?: (e?: object) => void;
 }
