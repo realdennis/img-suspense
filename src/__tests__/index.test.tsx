@@ -1,13 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/react/cleanup-after-each';
-import ImgSuspense from '../src/index.tsx';
-// afterEach(cleanup);
+import ImgSuspense from '../index';
 const Fallback = () => <p data-testid="fallback">Pending...</p>;
 
 test('[Main] Before & After image load, it should render', () => {
   const { container, getByTestId } = render(
-    <ImgSuspense src="Somewhere" fallback={<Fallback />} />
+    <ImgSuspense src="Somewhere" alt="fallback" fallback={<Fallback />} />
   );
   const img = container.querySelector('img');
   const getFallback = () => {
@@ -31,7 +30,12 @@ test('[Main] Before & After image load, it should render', () => {
 test('[Props] onLoad should be call', () => {
   const mockFunc = jest.fn();
   const { container } = render(
-    <ImgSuspense src="Somewhere" onLoad={mockFunc} fallback={<Fallback />} />
+    <ImgSuspense
+      src="Somewhere"
+      alt="alt"
+      onLoad={mockFunc}
+      fallback={<Fallback />}
+    />
   );
   expect(mockFunc).toHaveBeenCalledTimes(0);
   const img = container.querySelector('img');
@@ -41,7 +45,12 @@ test('[Props] onLoad should be call', () => {
 test('[Props] onError should be replace', () => {
   const mockFunc = jest.fn();
   const { container } = render(
-    <ImgSuspense src="Somewhere" onError={mockFunc} fallback={<Fallback />} />
+    <ImgSuspense
+      src="Somewhere"
+      alt="alt"
+      onError={mockFunc}
+      fallback={<Fallback />}
+    />
   );
   expect(mockFunc).toHaveBeenCalledTimes(0);
   const img = container.querySelector('img');
@@ -50,7 +59,7 @@ test('[Props] onError should be replace', () => {
 });
 test('[Exception] should throw exception if onError did not replace', () => {
   const { container } = render(
-    <ImgSuspense src="Somewhere" fallback={<Fallback />} />
+    <ImgSuspense src="Somewhere" alt="alt" fallback={<Fallback />} />
   );
   const img = container.querySelector('img');
   console.error = () => {};

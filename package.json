@@ -18,25 +18,21 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "microbundle build src/index.tsx --jsx react"
+    "build": "microbundle build src/index.tsx --jsx react && rm -rf .rts2_cache*/"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-transform-runtime": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
     "@testing-library/react": "^8.0.5",
+    "@types/jest": "^24.0.17",
     "@types/react": "^16.9.2",
-    "babel-jest": "^24.5.0",
     "coveralls": "^3.0.3",
     "jest": "^24.5.0",
     "microbundle": "^0.11.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   }
 }
