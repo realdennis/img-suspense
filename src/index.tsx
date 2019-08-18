@@ -20,8 +20,8 @@ interface ImageSuspenseProps {
   src: string;
   alt: string;
   style?: object;
-  onLoad: (e?: Event) => void;
-  onError: (e?: Event) => void;
+  onLoad: (e?: object) => void;
+  onError: (e?: object) => void;
 }
 /**
  * Allow user to pass onLoad handler
